@@ -1,0 +1,11 @@
+# Directories
+/dist/
+
+# Files
+/{{cookiecutter.project}}
+/TODO
+.DS_Store
+c.out
+
+# Patterns
+.*.sw[op]
