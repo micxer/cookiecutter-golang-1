@@ -4,6 +4,7 @@ default: test
 
 refresh:
 	cookiecutter gh:sjansen/cookiecutter-golang --output-dir .. --config-file .cookiecutter.yaml --no-input --overwrite-if-exists
+	git checkout go.mod go.sum
 
 test:
 	@scripts/run-all-tests
