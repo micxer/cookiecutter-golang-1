@@ -4,6 +4,13 @@ from subprocess import Popen
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
 
+if not os.path.exists(".fossa.yml"):
+    for command in [
+        ("fossa", "init"),
+    ]:
+        cmd = Popen(command, cwd=PROJECT_DIRECTORY)
+        cmd.wait()
+
 if not os.path.exists(".git"):
     for command in [
         ("git", "init"),
@@ -12,5 +19,5 @@ if not os.path.exists(".git"):
         ("go", "mod", "tidy"),
         ("git", "add", "."),
     ]:
-        git = Popen(command, cwd=PROJECT_DIRECTORY)
-        git.wait()
+        cmd = Popen(command, cwd=PROJECT_DIRECTORY)
+        cmd.wait()
