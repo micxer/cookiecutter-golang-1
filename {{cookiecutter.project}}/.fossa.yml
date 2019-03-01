@@ -1,0 +1,13 @@
+version: 1
+cli:
+  server: https://app.fossa.io
+  fetcher: custom
+  project: {{cookiecutter.project}}
+analyze:
+  modules:
+  - name: github.com/sjansen/{{cookiecutter.project}}
+    type: go
+    target: github.com/sjansen/{{cookiecutter.project}}
+    path: .
+    options:
+      all-tags: true
