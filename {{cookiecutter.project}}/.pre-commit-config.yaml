@@ -5,7 +5,7 @@ repos:
    -  id: vet
       name: go vet
       language: system
-      entry: go vet  ./...
+      entry: go vet -tags integration ./...
       pass_filenames: false
       types: [go]
    -  id: lint
