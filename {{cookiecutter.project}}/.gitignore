@@ -5,6 +5,7 @@
 
 # Files
 /{{cookiecutter.project}}
+/docker-compose.override.yml
 /TODO
 .DS_Store
 coverage.txt

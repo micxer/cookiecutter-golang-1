@@ -16,9 +16,7 @@ test-coverage: test-docker
 	go tool cover -html=dist/coverage.txt
 
 test-docker:
-	docker-compose --version
-	docker-compose build --pull go
-	docker-compose up --abort-on-container-exit --exit-code-from=go --force-recreate
+	@scripts/docker-up-test
 
 test-release:
 	git stash -u -k

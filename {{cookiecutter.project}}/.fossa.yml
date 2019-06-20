@@ -5,9 +5,9 @@ cli:
   project: {{cookiecutter.project}}
 analyze:
   modules:
-  - name: github.com/sjansen/{{cookiecutter.project}}
+  - name: github.com/{{cookiecutter.github_org_or_user}}/{{cookiecutter.project}}
     type: go
-    target: github.com/sjansen/{{cookiecutter.project}}
+    target: github.com/{{cookiecutter.github_org_or_user}}/{{cookiecutter.project}}
     path: .
     options:
       all-tags: true
